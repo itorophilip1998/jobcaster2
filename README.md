@@ -3,8 +3,8 @@
 
 <h3>Team Members</h3>
 <ul>
-  <li>Itoro Emmanuel Philip</li>
-    <li>Timothy Afolabi</li>
-    <li>Boniface</li>
-    <li>Mmeyene Edet</li> 
+  <li><b>Itoro Emmanuel Philip<b/><br></li>
+    <li><b>Timothy Afolabi<b/><br></li>
+    <li><b>Boniface<b/><br></li>
+    <li><b>Mmeyene Edet<b/><br></li> 
  </ul>
