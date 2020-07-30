@@ -1,4 +1,4 @@
-<h1 style="color:royalblue;">Team A</h1>
+<h1 style="color:Red !important;">Team A</h1>
 <h2>Human Resource Management System</h2>
 
 <h3>Team Members</h3>
