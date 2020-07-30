@@ -24,14 +24,15 @@ Route::get('/job/{id}', 'PostingController@show');
 //ApplyJobs Route
 Route::post('/applyjob', 'ApplyJobController@store');
 
-//Contactus Route
-Route::post('/contactus', 'ContactusController@store');
-
-//News Route
-Route::post('/newsfeeds', 'ContactusController@news');
-
 //Manager Route
-Route::put('/updatemanager', 'ManagersController@update');
+Route::put('/updatemanager/{id}', 'ManagersController@update');
 
 //Applicant Route
-Route::put('/updatejob', 'ApplicantController@update');
+Route::put('/applicant/{id}', 'ApplicantController@update');
+
+//Contactus 4 Route Mail
+Route::post('/contactus', 'ContactusController@store');
+
+//News 4 Route Mail
+Route::post('/newsfeeds', 'NewFeedsController@store');
+

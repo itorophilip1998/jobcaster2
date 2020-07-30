@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
- 
+
 use App\User;
 use App\Applicant;
 use App\Managers;
@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class ApplicantController extends Controller
 {
 
-    public function update(Request $request, $applicant)
+    public function update(Request $request, $id)
     {
-        $table=Applicant::find($applicant);
+            $table=Applicant::find($id);
             $table->phone=$request->phone;
             $table->address=$request->address;
             $table->nationality=$request->nationality;
@@ -21,12 +21,20 @@ class ApplicantController extends Controller
             $table->gender=$request->gender;
             $table->twitter=$request->twitter;
             $table->facebook=$request->facebook;
-            $table->profile_photo=$request->profile_photo;
-            $table->user_id=$applicant;
+            if($request->hasFile('profile_photo'))
+            {
+                $photo=$request->file('profile_photo')->store("photos",'public');
+                $table->profile_photo= $photo;
+            }
+            else
+            {
+                $table->profile_photo= null;
+            }
+            $table->user_id=$id;
             $table->save();
             $message=[
                 'code' => 200,
-                'user' => User::where('id',$applicant)->get(),
+                'user' => User::where('id',$id)->get(),
                 'message' => "Logged In"
             ];
             return response()->json($message);

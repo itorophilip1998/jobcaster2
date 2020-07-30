@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Contactus;
+use App\NewFeeds;
 use Illuminate\Http\Request;
 
-class ContactusController extends Controller
+class NewFeedsController extends Controller
 {
 
     public function store(Request $request)
     {
-        $table=new Contactus();
-        $table->name=$request->name;
+        $table=new NewFeeds();
         $table->email=$request->email;
-        $table->text=$request->text;
+        $table->topic='News Feeds Update';
         $table->save();
         return response()->json(['message'=>'Saved Successfully!',$table], 200);
     }
-    
 
 }
