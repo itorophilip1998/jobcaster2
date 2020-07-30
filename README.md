@@ -3,8 +3,8 @@
 
 <h3>Team Members</h3>
 <ul>
-  <li><b>Itoro Emmanuel Philip<b/><br></li>
-    <li><b>Timothy Afolabi<b/><br></li>
-    <li><b>Boniface<b/><br></li>
-    <li><b>Mmeyene Edet<b/><br></li> 
+  <li><b>Itoro Emmanuel Philip<b/><br>BackEnd</li>
+    <li><b>Timothy Afolabi<b/><br>FrontEnd</li>
+    <li><b>Boniface<b/><br>Android</li>
+    <li><b>Mmeyene Edet<b/><br>UIUX</li> 
  </ul>
