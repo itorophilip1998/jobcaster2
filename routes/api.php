@@ -36,3 +36,6 @@ Route::post('/contactus', 'ContactusController@store');
 //News 4 Route Mail
 Route::post('/newsfeeds', 'NewFeedsController@store');
 
+//test
+Route::get('/testmailinfo', 'NewFeedsController@test');
+

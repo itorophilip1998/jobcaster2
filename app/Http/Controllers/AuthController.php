@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 
@@ -63,7 +64,10 @@ class AuthController extends Controller
             $table->user_id=$findId;
             $table->save();
         }
+        // Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+        //     $message->to($to_email, $to_name);
 
+        // }
         $token = auth()->attempt(['email' => $input['email'], 'password' => $input['password']]);
         return response()->json([
             'code'   => 200,
